@@ -6,7 +6,14 @@ const getNomeCompleto = (nome , sobrenome,) => {
 }
 
 const Cat = ({nome,sobrenome,idade}) => {
-  return <Text> Hello, I am abc {getNomeCompleto(nome, sobrenome).toUpperCase()} and my age is {idade}</Text>
+  //let texto= 'anos'
+  //if(idade <= 1){ 
+    //texto='ano'
+  //}
+
+  const texto =( idade <= 1)? 'ano' : 'anos';
+
+  return <Text> Olá, sou  {getNomeCompleto(nome, sobrenome).toUpperCase()} minha idade {idade}{texto}</Text>
 }
 
 export default IFAL;
@@ -16,7 +23,7 @@ function IFAL() {
     <View style={styles.container}>
       <Cat nome='Black' sobrenome=' Pink' idade={15}/>
       <Cat nome='apolo' sobrenome='pedra' idade={5}/>
-      <Cat nome='pink' sobrenome='black' idade={2}/>
+      <Cat nome='pink' sobrenome='black' idade={1}/>
       <StatusBar style="auto" />
     </View>
   );s
