@@ -5,8 +5,8 @@ const getNomeCompleto = (nome , sobrenome, outro) => {
   return nome + ' ' + sobrenome + outro;
 }
 
-const Cat = () => {
-  return <Text>Hello, I am abc {getNomeCompleto('Garfield', 'Lasanha', 'Outro').toUpperCase()}</Text>
+const Cat = ({nome,sobrenome}) => {
+  return <Text> Hello, I am abc {getNomeCompleto(nome, sobrenome, 'Outro').toUpperCase()}</Text>
 }
 
 export default IFAL;
@@ -14,12 +14,12 @@ export default IFAL;
 function IFAL() {
   return (
     <View style={styles.container}>
-      <Cat/>
-      <Cat/>
-      <Cat/>
+      <Cat nome='Black' sobrenome=' Pink'/>
+      <Cat nome='apolo' sobrenome='pedra'/>
+      <Cat nome='pink' sobrenome='black'/>
       <StatusBar style="auto" />
     </View>
-  );
+  );s
 }
 
 const styles = StyleSheet.create({
